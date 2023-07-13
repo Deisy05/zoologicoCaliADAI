@@ -22,24 +22,6 @@ def insertion_sort_scene(arreglo):
 
 
 #ordenar escenas de aacuerdo a grandeza de cada una
-# def any_sort(A):
-#     # Encontrar el valor máximo en la lista para determinar el tamaño del arreglo de conteo
-#     max_value = max(A, key=lambda x: x[0])[0]
-
-#     # Crear el arreglo de conteo
-#     count = [0] * (max_value + 1)
-
-#     # Contar la frecuencia de cada elemento en la lista de entrada
-#     for tup in A:
-#         count[tup[0]] += 1
-
-#     # Modificar la lista original A para que contenga los elementos ordenados
-#     index = 0
-#     for i in range(len(count)):
-#         for j in range(count[i]):
-#             A[index] = (i, A[index][1])
-#             index += 1
-
 def any_sort(arr):
     # Encontrar el valor máximo en la lista
     max_value = max(arr, key=lambda x: x[0])
@@ -108,44 +90,37 @@ def counting_sort(arr):
 
 
 
-def another_sort(A):
-    new=merge(left, right)
-    if len(A) <= 1:
-        return A
+#def another_sort(A):
+#   new=merge(left, right)
+#    if len(A) <= 1:
+#        return A
 
-    mid = len(A) // 2
-    left = another_sort(A[:mid])
-    right = another_sort(A[mid:])
-    # Actualizar la lista original con la lista ordenada
-    A[:] = new[:]
+#    mid = len(A) // 2
+#    left = another_sort(A[:mid])
+#    right = another_sort(A[mid:])
 
 
-def merge(left, right):
-    merged = []
-    i = j = 0
 
-    while i < len(left) and j < len(right):
-        if left[i][0] < right[j][0] or (left[i][0] == right[j][0] and max(left[i][1]) < max(right[j][1])):
-            merged.append(left[i])
-            i += 1
-        else:
-            merged.append(right[j])
-            j += 1
+#def merge(left, right):
+#    merged = []
+#    i = j = 0
 
-    while i < len(left):
-        merged.append(left[i])
-        i += 1
+#    while i < len(left) and j < len(right):
+#        if left[i][0] < right[j][0] or (left[i][0] == right[j][0] and max(left[i][1]) < max(right[j][1])):
+#            merged.append(left[i])
+#            i += 1
+#        else:
+#            merged.append(right[j])
+#            j += 1
 
-    while j < len(right):
-        merged.append(right[j])
-        j += 1
+#    while i < len(left):
+#        merged.append(left[i])
+#        i += 1
 
-    return merged
+#    while j < len(right):
+#        merged.append(right[j])
+#        j += 1
+
+#   return merged
 
     
-
-#def another_sort_scene(B): 
-# ejemp= [(15, [1, 5, 9]), (15, [5, 1, 4])]
-
-# another_sort(ejemp)
-# print("ordenar escena   ", ejemp)
